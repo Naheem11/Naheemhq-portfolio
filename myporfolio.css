@@ -34,22 +34,29 @@ nav{
     gap: 60px;
     border-bottom: 0px solid #000;
     top: 0%;
-    justify-content: space-betwen;
+    justify-content: space-between;
 }
-#navbar{
+#navbar li{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 20px;
 }
-#navbar li{
+#navbar{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#navbar li a{
     list-style-type: none;
     padding: 7px;
     width: 70px;
     border-radius: 5px;
     text-align: center;
 }
-#navbar li:hover{
+#navbar li a:hover{
     color: #fff;
     cursor: pointer;
     background-color: #00f;
@@ -540,5 +547,89 @@ nav{
 
     .job2 br {
         display: none; /* Hide <br> tags */
+    }
+}
+/* --- New Menu Toggling Styles --- */
+
+#menu-toggle {
+    display: none; /* Hidden by default on large screens */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000; /* Match your logo color or navbar links */
+}
+
+/* Base style for the collapsible content (hidden on mobile by default) */
+#menu-content {
+    gap: 20px;
+    display: flex; /* Keep the original layout on desktop */
+}
+
+/* When the menu is open, we use JavaScript to add this class to the <body>, 
+   or alternatively, we can target the menu content directly */
+.menu-open #menu-content {
+    display: flex !important; /* Force display when open */
+    /* Add any other styling for the open state here */
+}
+
+/* --- Responsive CSS for the Mobile Menu Display --- */
+@media (max-width: 600px) {
+    #top-container {
+        /* Remove the stacked layout you had before, 
+           and put logo and button on the same line */
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Show the hamburger icon */
+    #menu-toggle {
+        display: block;
+    }
+    
+    /* Hide the menu content by default on mobile */
+    #menu-content {
+        position: absolute;
+        top: 77px; /* Adjust this to sit below your header height */
+        justify-content: center;
+        right: 0%;
+        width: 100%;
+        background-color: #fff; /* Black background for the menu */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0px 0px;
+        z-index: 1000;
+        display: none; /* HIDE IT BY DEFAULT */
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    }
+    
+    #navbar {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #navbar li {
+        width: 80%; /* Make list items wider */
+        background-color: #000;
+    }
+    
+    #navbar li a {
+        color: #fff; /* White links for black background */
+        display: block;
+        padding: 5px;
+    }
+    
+    #contact {
+        color: #00f;
+        background-color: #fff;
+        border: 1px #00f solid;
+        padding: 10px 20px;
+        margin-top: 10px ;
+        margin-bottom: 10px;
+        margin-right: 80px;
     }
 }

@@ -12,15 +12,21 @@
             <span id="logoC">HQ</span>
         </h1>
         <nav>
-            <ul id="navbar">
-                <li><a href="#page">Home</a></li>
-                <li><a href="#demo">About</a></li>
-                <li><a href="#next-container">Skills</a></li>
-                <li><a href="#another-container">Work</a></li>
-                <li><a href="#blog-container">Blog</a></li>
-            </ul>
-            <a id="contact" href="#contact-container">Contact</a>
-        </nav>
+    <button id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <div id="menu-content">
+        <ul id="navbar">
+            <li><a href="#page">Home</a></li>
+            <li><a href="#demo">About</a></li>
+            <li><a href="#next-container">Skills</a></li>
+            <li><a href="#another-container">Work</a></li>
+            <li><a href="#blog-container">Blog</a></li>
+        </ul>
+        <a id="contact" href="#contact-container">Contact</a>
+    </div>
+</nav>
     </div>
     <div id="page">
         <div class="type">
@@ -31,8 +37,8 @@
                   platforms.
             </p>
             <section id="items">
-                <a class="contact" href="#">Contact me</a>
-                <a class="view" href="#">View my work</a>
+                <a class="contact" href="contact.html">Contact me</a>
+                <a class="view" href="#another-container">View my work</a>
             </section>
         </div>
         <img id="mypicture" src="nahe.jpg" alt="my picture">
@@ -50,7 +56,7 @@
                 optimizing for performance, and <br> ensuring security
                 and scalability accross all project.
             </p>
-            <a id="learn" href="#">Learn more about me</a>
+            <a id="learn" href="#demo">Learn more about me</a>
         </div>
         <img id="me" src="me.jpg" alt="me">
     </div>
@@ -66,7 +72,7 @@
             <span class="pad">React</span>
             <span class="pad">UI/UX</span>
         </section>
-        <a id="all" href="#">View All My Skills</a>
+        <!-- <a id="all" href="#">View All My Skills</a> -->
     </div>
     <section id="another-container">
         <h1>Places I've worked</h1>
@@ -179,7 +185,7 @@
                 <a class="web" href="time.jpg">Read More></a>
             </div>
             </div>
-            <a id="all" href="#">View all posts</a>
+            <!-- <a id="all" href="#">View all posts</a> -->
         </section>
     </article>
     <section id="contact-container">
@@ -188,7 +194,7 @@
             life. <br>
             I'm here to help you create something amazing.
         </p>
-        <a id="all" href="#">Get in Touch</a>
+        <a id="all" href="contact.html">Get in Touch</a>
     </section>
         <footer class="site-footer">
         <div class="footer-content-top">
@@ -228,7 +234,7 @@
             <p class="copyright-text">© 2025 Adepoju Naheem Olabisi | All rights reserved.</p>
         </div>
     </footer>
-
-</body>
 <link rel="stylesheet" href="myporfolio.css">
+<script src="myportfolio.js"></script>
+</body>
 </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        input, textarea{
+            display: block;
+            width: 100%;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            padding: 7px;
+            border: 1px solid #2583eb;
+        }
+        input::placeholder,
+        textarea::placeholder{
+            color: #2563eb;
+            font-family: sans-serif;
+            padding: 5px;
+            font-weight: 600;
+        }
+        button{
+            width: 100%;
+            color: aliceblue;
+            background-color: #2583eb;
+            border: none;
+            padding: 7px;
+        }
+        button:hover{
+            background-color: #2563eb;
+        }
+        h2,p{
+            margin-bottom: 20px;
+            color: #2563eb;
+        }
+        .container{
+        width: 90%;
+        max-width: 600px;
+        margin: 5% auto;
+        height: 70%;
+        box-shadow: 5px 5px 15px grey;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: aliceblue;
+        }
+        footer{
+            margin-top: 20px;
+            text-align: center;
+            color: #2583eb;
+        }
+        textarea{
+            height: 100px;
+        }
+        body{
+            background-color: #3b82f6;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* Responsive Enhancements 📱💻 */
+
+    /* 1. Use relative units for better scaling on all screens */
+    .container{
+        /* Overriding previous fixed styles */
+        width: 90%; /* Much better on small screens */
+        margin-left: 5%; /* Centers the container */
+        margin-top: 5%; /* Adjusts top margin */
+        padding: 5vw; /* Padding based on viewport width for scaling */
+        /* Maintain: height: 70%; box-shadow: 5px 5px 15px grey; border-radius: 10px; background-color: aliceblue; */
+    }
+
+    /* 2. Media Query for Tablets and Desktops (screens wider than 600px) */
+    @media screen and (min-width: 600px) {
+        .container {
+            width: 60%; /* Wider on tablets */
+            margin-left: 20%;
+        }
+    }
+
+    /* 3. Media Query for Laptops and large Desktops (screens wider than 1024px) */
+    @media screen and (min-width: 1024px) {
+        .container {
+            width: 40%; /* Returns to a desktop-friendly width */
+            margin-left: 30%;
+        }
+    }
+
+    /* 4. Small adjustment for font sizing on very small devices */
+    @media screen and (max-width: 400px) {
+        h2 {
+            font-size: 1.2em; /* Shrink the main heading */
+        }
+        p {
+            font-size: 0.9em; /* Shrink the sub-heading */
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h2>NaheemHQ Contact form</h2>
+            <p>Contact us for custom quotes</p>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email Address">
+            <input type="tel" id="tel" placeholder="Your Number (optional)">
+            <input type="website" id="website" placeholder="Your Website (optional)">
+            <textarea name="" id="textarea" placeholder="Enter Your Message Here"></textarea>
+            <button type="submit">Submit</button>
+            <footer>Designed by <a href="">NaheemHQ</a></footer>
+        </form>
+    </div>
+</body>
+</html>
